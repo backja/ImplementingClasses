@@ -93,7 +93,7 @@ class Point(object):
         return total_distance
 
     def closer_to(self,point2,point3):
-        if self.get_distance_from(point2) >= self.get_distance_from(point3):
+        if self.get_distance_from(point2) <= self.get_distance_from(point3):
             return point2
         else:
             return point3
@@ -199,6 +199,7 @@ def run_test_init():
     print('Expected for p1: 30 999')
     print('Actual for p1:  ', p1.x, p1.y)
     print('Expected for p2: 100 -40')
+    print('Actual for p2:  ', p2.x, p2.y)
 
 def run_test_repr():
     """
